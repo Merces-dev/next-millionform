@@ -40,7 +40,7 @@ def generate_user(id):
     }
 
 # Number of users to generate
-num_users = 2000000
+num_users = 1000000
 
 # Ensure the directory exists
 os.makedirs("mock", exist_ok=True)
@@ -54,5 +54,5 @@ users_json = json.dumps(users, indent=2)
 # Save the JSON to a file in the mock directory
 with open("mock/users.json", "w") as file:
     file.write(users_json)
-
-print("Generated 2,000,000 users with random data in mock/users.json")
+    
+print("Generated", num_users, "users with random data in mock/users.json")
